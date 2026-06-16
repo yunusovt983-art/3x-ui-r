@@ -27,6 +27,10 @@ Rust-проект (redesign, обзор экосистемы, лицензии, 
 | [reality/](reality/README.md) | xtls/reality | MPL-2.0 | Анти-цензурный транспорт; модель `StreamSettings::Reality`, генерация ключей |
 | [utls/](utls/README.md) | refraction/utls | BSD-3 | Подделка TLS-fingerprint; поле `fingerprint` (chrome/firefox/…) |
 | [telego/](telego/README.md) | mymmrac/telego | MIT | Telegram-бот (**BC-8**); паттерны для `teloxide` на Rust |
+| [wireguard/](wireguard/README.md) | wireguard-go | MIT | WireGuard inbound — идентичность по публичному ключу (отдельный агрегат, не VLESS-клиент) |
+| [quic-hysteria/](quic-hysteria/README.md) | quic-go + apernet | MIT | QUIC-транспорты Hysteria2/TUIC; Brutal CC (bandwidth как доменный параметр) |
+| [shadowsocks/](shadowsocks/README.md) | sing-shadowsocks + sing | GPL | Shadowsocks 2022 (BLAKE3, EIH-мультиюзер) — естественный per-user PSK |
+| [dns/](dns/README.md) | miekg/dns | BSD-3 | DNS-подсистема (резолверы, fakedns, query-strategy); секция `dns` = рестартная |
 
 ## Связь с остальной документацией
 

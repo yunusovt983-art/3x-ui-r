@@ -34,3 +34,12 @@ hot-diff конфигурации, federation).
 ```bash
 bash clone_vendor.sh   # shallow-клоны тематических зависимостей в Vendor/
 ```
+
+## Лицензия
+
+Проект распространяется под **[GNU AGPL-3.0](LICENSE)** (GNU Affero General Public License v3.0).
+Это сетевой copyleft: при предоставлении доступа к панели по сети (в т.ч. как SaaS) пользователям
+должен быть доступен исходный код, включая ваши модификации.
+
+`xray-core` используется как **внешний процесс** за gRPC (Anti-Corruption Layer), а не линкуется в
+бинарь панели — см. [docs/Arch/08-licensing-compliance.md](docs/Arch/08-licensing-compliance.md).
