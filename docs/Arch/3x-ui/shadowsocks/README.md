@@ -24,14 +24,14 @@
                                     uPSK[User]  (для session-ключей)
 
    Клиент шлёт:                          Сервер:
-   ┌──────────────────────────────┐      ┌─────────────────────────────────────┐
+   ┌───────────────────────────────┐      ┌───────────────────────────────────────┐
    │ salt                          │      │ identitySubkey =                      │
    │ EIH = Enc_iPSK( hash(uPSK) )  │ ───▶ │  blake3.DeriveKey("…identity…",       │
    │ enc_session( header+payload ) │      │     iPSK ‖ salt)                      │
-   └──────────────────────────────┘      │ Dec(EIH) → hash → uPSKHash[hash]=User │
+   └───────────────────────────────┘      │ Dec(EIH) → hash → uPSKHash[hash]=User │
                                           │ sessionKey = DeriveKey(uPSK, salt)    │
                                           │ ctx = auth.ContextWithUser(User)      │
-                                          └─────────────────────────────────────┘
+                                          └───────────────────────────────────────┘
    ⇒ сервер опознаёт пользователя ДО расшифровки payload, по зашифрованному заголовку
 ```
 - session-ключ: `blake3.DeriveKey("shadowsocks 2022 session subkey", uPSK ‖ salt)`.
